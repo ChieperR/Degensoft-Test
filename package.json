@@ -1,0 +1,19 @@
+{
+  "name": "degensoft-test",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --no-warnings --max-old-space-size=8192 --experimental-specifier-resolution=node --loader ts-node/esm --import ./logError.js start.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "crypto-js": "^4.2.0",
+    "ts-node": "^10.9.2",
+    "tslog": "^4.9.2",
+    "typescript": "^5.4.5",
+    "viem": "^2.9.19"
+  }
+}
