@@ -26,8 +26,6 @@ export const decryptPrivateKey = (encryptedPrivateKey: string): Hex => {
         privateKey = "0x" + privateKey.slice(2);
     }
 
-    console.log(privateKey)
-
     if (privateKey.length === 66) return privateKey as Hex
     throw new Error('Неверный пароль для дешифрования')
 }
