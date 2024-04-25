@@ -24,6 +24,8 @@ export const decryptPrivateKey = (encryptedPrivateKey: string): Hex => {
 
     if (privateKey.startsWith("00")) {
         privateKey = "0x" + privateKey.slice(2);
+    } else {
+        privateKey = "0x" + privateKey
     }
 
     if (privateKey.length === 66) return privateKey as Hex
