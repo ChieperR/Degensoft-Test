@@ -15,6 +15,7 @@ export const generalConfig = {
     // 1 − In percent
     // 2 - In ezETH
     isRandomWallets: false, // Рандомизировать кошельки − true, идти по порядку − false
+    useEncryptedWallets: true, // Работа с зашифрованными приватниками − true, с чистыми − false
 
     decryptPassword: '' // Пароль для дешифрования кошельков
 }

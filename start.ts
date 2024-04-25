@@ -6,7 +6,8 @@ import {generalConfig} from "./config"
 import {Karak} from "./modules/karak";
 import {decryptPrivateKey} from "./utils/decryptWallets";
 
-let privateKeys: Hex[] = readWallets('./wallets.txt').map(decryptPrivateKey).map(privateKeyConvert)
+let privateKeysTmp = readWallets('./wallets.txt')
+let privateKeys = generalConfig.useEncryptedWallets ? privateKeysTmp.map(decryptPrivateKey).map(privateKeyConvert) : privateKeysTmp.map(privateKeyConvert)
 if (generalConfig.isRandomWallets) shuffle(privateKeys)
 
 const accountWork = async (privateKey: Hex) => {
